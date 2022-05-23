@@ -4,8 +4,11 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import RouterPath from './RouterPath';
 
-
-import './App.css';
+import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
+import {
+    Ecommerce, Orders, Kanban, Area, Bar, Pie, Line, Pyramid, Stacked, Financial,
+    Employees, Customers, ColorPicker, ColorMapping, Editor, Calendar
+} from './pages'; import './App.css';
 
 
 const App = () => {
@@ -26,10 +29,10 @@ const App = () => {
                     </div>
                     {activeMenu ? (
                         <div className='w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white'>
-                            Sidebar
-                        </div>) : (<div className='w-0 dark:bg-secondary-dark-bg'>Sidebar</div>)}
+                            <Sidebar />
+                        </div>) : (<div className='w-0 dark:bg-secondary-dark-bg'><Sidebar /></div>)}
                     <div className={`dark:bg-main-bg bg-main-bg min-h-screen w-full ${activeMenu ? 'md:ml-72' : 'flex-2'}`}>
-                        <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full">NavBar</div>
+                        <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full"><Navbar /></div>
                     </div>
                 </div>
                 <RouterPath />
