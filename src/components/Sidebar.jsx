@@ -15,9 +15,9 @@ const Sidebar = () => {
     const activeLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-wthite text-md m-2';
     const normalLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md text-gray-700 dark:text-gray-200 dark:hover:text-black hover:bg-light-gray m-2'
     const handleSubCategory = (e) => {
-        const subcategory = e.target.parentNode.querySelector('.subcategory-cont');
-        const menudrop = e.target.querySelector('.menu-down');
-        const menuup = e.target.querySelector('.menu-up');
+        const subcategory = e.currentTarget.parentNode.querySelector('.subcategory-cont');
+        const menudrop = e.currentTarget.querySelector('.menu-down');
+        const menuup = e.currentTarget.querySelector('.menu-up');
 
         subcategory.classList.toggle('h-0');
         menudrop.classList.toggle('hidden');
@@ -50,7 +50,7 @@ const Sidebar = () => {
                     {
                         links.map(item => (
                             <div key={item.title}>
-                                <p className='text-gray-400 m-3 mt-4 uppercase' onClick={(e) => { handleSubCategory(e) }}>
+                                <p className='text-gray-400 p-3 pt-4 uppercase cursor-pointer' onClick={(e) => { handleSubCategory(e) }}>
                                     {item.title}&nbsp;
                                     <IoChevronDownOutline className='inline menu-down' />
                                     <IoChevronUpOutline className='inline hidden menu-up' />
