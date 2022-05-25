@@ -9,10 +9,11 @@ import {
     Ecommerce, Orders, Kanban, Area, Bar, Pie, Line, Pyramid, Stacked, Financial,
     Employees, Customers, ColorPicker, ColorMapping, Editor, Calendar
 } from './pages'; import './App.css';
+import { useStateContext } from './contexts/ContextProvider';
 
 
 const App = () => {
-    const activeMenu = false;
+    const { activeMenu, setActiveMenu } = useStateContext();
 
     return (
         <div>
