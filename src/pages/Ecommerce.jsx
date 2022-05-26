@@ -8,6 +8,8 @@ import { useStateContext } from '../contexts/ContextProvider';
 import { IoTerminal } from 'react-icons/io5';
 
 const Ecommerce = () => {
+    const { currentColor } = useStateContext()
+
     return (
         <div className='mt-12'>
             <div className="flex flex-wrap lg:flex-nowrap justify-center">
@@ -18,7 +20,7 @@ const Ecommerce = () => {
                             <p className='font-bold text-gray-400'>Earnings</p>
                             <p className='text-2xl'>$63,448.78</p>
                             <div className="mt-6">
-                                <Button color="white" bgColor="blue" text="Download" borderRadius="10px" size="md" />
+                                <Button color="white" bgColor={currentColor} text="Download" borderRadius="10px" size="md" />
                             </div>
                         </div>
                     </div>
@@ -49,7 +51,7 @@ const Ecommerce = () => {
             </div>
 
             <div className='flex gap-10 flex-wrap justify-center'>
-                <div className="bg-white drak:text-gray-200 dark:bg-secondary-dark-bg m-3 p-5 rounded-2xl md:w-780">
+                <div className="bg-white drak:text-gray-200 dark:bg-secondary-dark-bg m-3 p-5 rounded-2xl w-full">
                     <div className="flex justify-between">
                         <p className='font-semibold text-xl'>Revenue Updates</p>
                         <div className="flex items-center gap-4">
@@ -87,10 +89,10 @@ const Ecommerce = () => {
                                 <p className="text-gray-500 mt-1">Budget</p>
                             </div>
                             <div className='mt-5'>
-                                <SparkLine currentColor="blue" id="line-sparkline" type="Line" height="80px" width="250px" data={SparklineAreaData} color="blue" />
+                                <SparkLine currentColor={currentColor} id="line-sparkline" type="Line" height="80px" width="250px" data={SparklineAreaData} color="blue" />
                             </div>
                             <div className="mt-10">
-                                <Button bgColor='blue' color="white" text="Download Report" borderRadius='10px' />
+                                <Button bgColor={currentColor} color="white" text="Download Report" borderRadius='10px' />
                             </div>
                         </div>
                         <div>
