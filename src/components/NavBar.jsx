@@ -45,8 +45,14 @@ const Navbar = () => {
 
             <div className="flex">
                 <NavButton title="Cart" customFunc={() => handleClick('cart')} color={currentColor} icon={<FiShoppingCart />} />
+                {isClicked.cart && <Cart />}
+
                 <NavButton title="Chat" customFunc={() => handleClick('chat')} color={currentColor} dotColor={"yellow"} icon={<BsChatLeft />} />
+                {isClicked.chat && <Chat />}
+
                 <NavButton title="Notifications" customFunc={() => handleClick('notification')} dotColor={"blue"} color={currentColor} icon={<RiNotification3Line />} />
+                {isClicked.notification && <Notification />}
+
                 <TooltipComponent content="Profile" position='BottomCenter'>
                     <div className="flex items-center cursor-pointer gap-2 p-1 hover:bg-light-gray rounded-lg"
                         onClick={() => handleClick('userProfile')}>
@@ -58,12 +64,7 @@ const Navbar = () => {
                         <MdKeyboardArrowDown className='text-gray-400 test-14' />
                     </div>
                 </TooltipComponent>
-
-                {isClicked.cart && <Cart />}
-                {isClicked.chat && <Chat />}
-                {isClicked.notification && <Notification />}
                 {isClicked.userProfile && <UserProfile />}
-
             </div>
         </div>
     );
