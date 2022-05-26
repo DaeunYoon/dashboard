@@ -14,7 +14,6 @@ const Employees = () => {
                 dataSource={employeesData}
                 allowPaging
                 allowSortings
-                editSettings={{ allowDeleting: true, allowEditing: true }}
                 toolbar={['Search']}
                 width="auto"
             >
