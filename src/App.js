@@ -19,6 +19,11 @@ const App = () => {
         <div className={currentMode === 'Dark' ? 'dark' : ''
         }>
             <BrowserRouter>
+                {/* {activeMenu ? (
+                    <div className='w-72 fixed sidebar dark:bg-gray-500 bg-white'>
+                        <Sidebar />
+                    </div>)
+                    : (<div className='w-0 dark:bg-secondary-dark-bg'><Sidebar /></div>)} */}
                 <div className="flex relativ dark:bg-main-dark-bg">
                     <div className="fixed right-4 bottom-4" style={{ zIndex: '1000' }}>
                         <TooltipComponent content="Settings" position='Top'>
