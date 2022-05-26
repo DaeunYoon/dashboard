@@ -16,7 +16,7 @@ const ThemeSettings = () => {
 
     return (
         <div className='theme-settings bg-half-transparent w-screen fixed top-0 right-0'>
-            <div className="float-right h-screen dark:text-gray-200 bg-white dark:[#484B52 w-400">
+            <div className="float-right h-screen dark:text-gray-200 bg-white dark:bg-gray-500 w-400">
                 <div className="flex justify-between items-center p-4 ml-4">
                     <p className="font-semibold text-lg">Settings</p>
                     <button type='button' onClick={(e) => setThemeSettings(false)} style={{ color: 'rgb(153,171,180)', borderRadius: '50%' }}

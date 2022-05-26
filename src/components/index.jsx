@@ -9,7 +9,7 @@ export { default as Notification } from './Notification';
 export { default as Sidebar } from './Sidebar';
 export { default as ThemeSettings } from './ThemeSettings';
 export { default as UserProfile } from './UserProfile';
-export { default as LineCahrt } from './Charts/LineCahrt';
+export { default as LineChart } from './Charts/LineChart';
 export { default as Pie } from './Charts/Pie';
 export { default as SparkLine } from './Charts/SparkLine';
 export { default as Stacked } from './Charts/Stacked';
